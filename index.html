@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivative Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Derivative Calculator</h2>
+            <button class="instruction-btn" onclick="toggleInstructions()">Instructions</button>
+        </div>
+        <div class="content">
+            <input type="text" id="function" placeholder="Enter your function here (e.g., 3x^2 + 6y)">
+            <div id="variables-container">
+                <input type="text" class="variable" placeholder="Enter the variable (e.g., x)">
+            </div>
+            <button class="add-variable-btn" onclick="addVariable()">Add Variable</button>
+            <button class="calculate-btn" onclick="calculateDerivative()">Calculate Derivative</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="instruction-popup" class="instruction-popup">
+            <div class="instruction-content">
+                <span class="close-btn" onclick="toggleInstructions()">&times;</span>
+                <h3>Instructions</h3>
+                <p>1. Enter your mathematical function in the input field (e.g.,sqrt(9x) + 6y).</p>
+                <p>2. Enter the variable for which you want to calculate the derivative (e.g., x).</p>
+                <p>3. Click "Add Variable" if you need to add another variable.</p>
+                <p>4. Click "Calculate Derivative" to see the result.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.0/math.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
